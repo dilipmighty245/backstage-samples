@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "aecaec87-7505-4148-b073-3b12bcad394f",
+		"name": "bookinfo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-GB,en-US;q=0.9,en;q=0.8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "jason",
+							"type": "text"
+						},
+						{
+							"key": "passwd",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://a54afa672fda44b57b3060d29ff85902-1026683552.us-west-2.elb.amazonaws.com/login",
+					"protocol": "http",
+					"host": [
+						"a54afa672fda44b57b3060d29ff85902-1026683552",
+						"us-west-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

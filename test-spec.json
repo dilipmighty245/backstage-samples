@@ -1,68 +1,70 @@
-{
-	"info": {
-		"_postman_id": "aecaec87-7505-4148-b073-3b12bcad394f",
-		"name": "bookinfo",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-						"type": "text"
-					},
-					{
-						"key": "Accept-Language",
-						"value": "en-GB,en-US;q=0.9,en;q=0.8",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "jason",
-							"type": "text"
-						},
-						{
-							"key": "passwd",
-							"value": "",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://a54afa672fda44b57b3060d29ff85902-1026683552.us-west-2.elb.amazonaws.com/login",
-					"protocol": "http",
-					"host": [
-						"a54afa672fda44b57b3060d29ff85902-1026683552",
-						"us-west-2",
-						"elb",
-						"amazonaws",
-						"com"
-					],
-					"path": [
-						"login"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
-			},
-			"response": []
-		}
-	]
-}
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: '0.1'
+servers:
+  - url: https://api.sunrise-sunset.org
+paths:
+  /json:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+        - name: lng
+          in: query
+          schema:
+            type: string
+          example: '-4.4203400'
+        - name: lat
+          in: query
+          schema:
+            type: string
+          example: '36.7201600'
+      responses:
+        '200':
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: object
+                    properties:
+                      sunrise:
+                        type: string
+                      solar_noon:
+                        type: string
+                      day_length:
+                        type: string
+                      astronomical_twilight_end:
+                        type: string
+                      astronomical_twilight_begin:
+                        type: string
+                      sunset:
+                        type: string
+                      civil_twilight_end:
+                        type: string
+                      nautical_twilight_end:
+                        type: string
+                      civil_twilight_begin:
+                        type: string
+                      nautical_twilight_begin:
+                        type: string
+                  status:
+                    type: string
+              examples:
+                '0':
+                  value: >-
+                    {"results":{"sunrise":"7:02:05 AM","sunset":"6:01:12
+                    PM","solar_noon":"12:31:39
+                    PM","day_length":"10:59:07","civil_twilight_begin":"6:37:05
+                    AM","civil_twilight_end":"6:26:13
+                    PM","nautical_twilight_begin":"6:06:49
+                    AM","nautical_twilight_end":"6:56:28
+                    PM","astronomical_twilight_begin":"5:36:49
+                    AM","astronomical_twilight_end":"7:26:29 PM"},"status":"OK"}
+      servers:
+        - url: https://api.sunrise-sunset.org
+    servers:
+      - url: https://api.sunrise-sunset.org

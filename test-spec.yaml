@@ -4,7 +4,7 @@ metadata:
   name: dt-sample-spec
   description: The Placeholder API
 spec:
-  type: swagger
+  type: openapi
   lifecycle: production
   owner: DT
   definition:

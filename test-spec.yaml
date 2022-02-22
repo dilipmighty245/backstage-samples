@@ -76,4 +76,6 @@ spec:
                     AM","astronomical_twilight_end":"7:26:29 PM"},"status":"OK"}
       servers:
         - url: https://api.sunrise-sunset.org
+    servers:
+      - url: https://api.sunrise-sunset.org
 

@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dt-component-consumer
+  # This is an extra long description
+  description: Sunrise-sunset API
+  links:
+    - url: https://sunrise-sunset.org/api
+      title: Sunrise
+      icon: github
+spec:
+  type: service
+  lifecycle: experimental
+  owner: dt
+  consumesApis:
+    - dt-sample-spec

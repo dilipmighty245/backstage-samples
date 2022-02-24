@@ -1,0 +1,6 @@
+apiVersion: mazinger.backstage.io/v1beta3
+kind: MazingerAPISpec
+spec:
+  type: service
+  owner: dt
+  project: myproject

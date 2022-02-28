@@ -9,7 +9,8 @@ spec:
   type: openapi
   lifecycle: production
   owner: DT
-  data: |
+  data: sample data
+  definition: |
     openapi: 3.0.1
     info:
       title: defaultTitle

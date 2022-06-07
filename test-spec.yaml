@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: dt-sample-spec
-  description: sample
+  description: sample description 
 spec:
   type: openapi
   lifecycle: production

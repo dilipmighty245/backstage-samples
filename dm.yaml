@@ -4,9 +4,9 @@ metadata:
   name: root
   description: The infra business unit
 spec:
-  type: business-unit
+  type: team
   profile:
-    displayName: Infrastructure
+    displayName: Root
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   children: [cofig, rutime]
@@ -17,7 +17,7 @@ metadata:
   name: config
   description: The infra business unit
 spec:
-  type: business-unit
+  type: team
   profile:
     displayName: Config
     email: infrastructure@example.com

@@ -9,7 +9,7 @@ spec:
     displayName: Root
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  children: [cofig, rutime]
+  children: [config, rutime]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group

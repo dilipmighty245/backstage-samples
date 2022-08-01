@@ -52,3 +52,17 @@ spec:
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: project
   children: [acme-dev-space]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: acme-dev-space
+  description: The infra business unit
+spec:
+  type: team
+  profile:
+    displayName: acme-dev-space
+    email: dt@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: acme-api-space
+  children: [dt]

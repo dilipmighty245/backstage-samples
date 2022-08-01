@@ -24,3 +24,18 @@ spec:
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: root
   children: [dili]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: acme-spi-space
+  description: The infra business unit
+spec:
+  type: team
+  profile:
+    displayName: acme-spi-space
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: root
+  children: [devspace]
+---

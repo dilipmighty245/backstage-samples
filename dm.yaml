@@ -14,28 +14,55 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
+  name: project
+  description: The infra business unit
+spec:
+  type: team
+  profile:
+    displayName: project
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: root
+  children: [devspace]
+  ---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
   name: config
   description: The infra business unit
 spec:
   type: team
   profile:
-    displayName: Config
+    displayName: config
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  parent: root
-  children: [dili]
+  parent: project
+  children: [acme-api-space]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: acme-spi-space
+  name: acme-api-space
   description: The infra business unit
 spec:
   type: team
   profile:
-    displayName: acme-spi-space
+    displayName: acme-api-space
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  parent: root
-  children: [devspace]
+  parent: project
+  children: [acme-dev-space]
 ---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: acme-dev-space
+  description: The infra business unit
+spec:
+  type: team
+  profile:
+    displayName: acme-dev-space
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: acme-api-space
+  children: [acme-dev-space]

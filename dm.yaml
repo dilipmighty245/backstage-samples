@@ -65,4 +65,4 @@ spec:
     email: dt@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: acme-api-space
-  children: [dt]
+  children: []

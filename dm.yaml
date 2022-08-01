@@ -9,7 +9,7 @@ spec:
     displayName: Root
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  children: [config, rutime]
+  children: [project]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -23,7 +23,7 @@ spec:
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: root
-  children: [devspace]
+  children: [config]
   ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -65,4 +65,3 @@ spec:
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: acme-api-space
-  children: [acme-dev-space]

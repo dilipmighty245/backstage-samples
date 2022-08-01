@@ -48,7 +48,7 @@ spec:
   type: team
   profile:
     displayName: acme-api-space
-    email: infrastructure@example.com
+    email: dt@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   parent: project
   children: [acme-dev-space]

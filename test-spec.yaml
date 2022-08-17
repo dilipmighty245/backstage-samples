@@ -10,7 +10,7 @@ spec:
   definition: |
     openapi: 3.0.1
     info:
-      title: defaultTitle
+      title: newTitle
       description: defaultDescription
       version: '0.1'
     servers:
@@ -18,7 +18,7 @@ spec:
     paths:
       /json:
         get:
-          description: Auto generated using Swagger Inspector
+          description: Auto generated using OpenAPI Inspector
           parameters:
             - name: lng
               in: query

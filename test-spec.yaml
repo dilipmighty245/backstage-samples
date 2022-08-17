@@ -80,21 +80,21 @@ spec:
           - url: https://api.sunrise-sunset.org
     x-mazinger:
         documentationReport: 
-       		overallScore: 3.7973596355567514
-		      overallCoverage: 3.891514423076923
-	      	overallQualityScore: 3.703204848036579
-		      overallOperationsScore: 13.878842451665982
-		      overallOperationsCoverage: 14.33964705882353
-      		overallOperationsQualityScore: 13.418037844508433
-		      overallDomainsCoverage: 19.047619047619047
-      		overallDomainsQualityScore: 19.047619047619047
-    	  apiScore:
-      		overallScor: 2.0196870748299323
-      		healthPercentage: 90.58823529411765
+       	  overallScore: 3.7973596355567514
+          overallCoverage: 3.891514423076923
+	  overallQualityScore: 3.703204848036579
+	  overallOperationsScore: 13.878842451665982
+          overallOperationsCoverage: 14.33964705882353
+      	  overallOperationsQualityScore: 13.418037844508433
+	  overallDomainsCoverage: 19.047619047619047
+      	  overallDomainsQualityScore: 19.047619047619047	
+    	apiScore:
+          overallScor: 2.0196870748299323
+      	  healthPercentage: 90.58823529411765
         specStatistics:
-    		  domains: 21
-      		operations: 85
-      		structures: 310
-      		postOperations: 85
+    	  domains: 21
+      	  operations: 85
+          structures: 310
+      	  postOperations: 85
       
   

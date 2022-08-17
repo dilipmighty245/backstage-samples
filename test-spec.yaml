@@ -10,7 +10,7 @@ spec:
   definition: |
     openapi: 3.0.1
     info:
-      title: newTitle
+      title: updatedTitle
       description: defaultDescription
       version: '0.1'
     servers:

@@ -87,12 +87,12 @@ spec:
           overallOperationsCoverage: 14.33964705882353
           overallOperationsQualityScore: 13.418037844508433
           overallDomainsCoverage: 19.047619047619047
-          overallDomainsQualityScore: 19.047619047619047	
-    	apiScore:
-        overallScor: 2.0196870748299323
-        healthPercentage: 90.58823529411765
-      specStatistics:
-        domains: 21
-        operations: 85
-        structures: 310
-        postOperations: 85
+          overallDomainsQualityScore: 19.047619047619047
+        apiScore:
+          overallScor: 2.0196870748299323
+          healthPercentage: 90.58823529411765
+        specStatistics:
+          domains: 21
+          operations: 85
+          structures: 310
+          postOperations: 85

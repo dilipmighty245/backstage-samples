@@ -1,70 +1,66 @@
-openapi: 3.0.1
-info:
-  title: acme
-  description: acme
-  version: '0.1'
-servers:
-  - url: https://api.sunrise-sunset.org
-paths:
-  /json:
-    get:
-      description: Auto generated using Swagger Inspector
-      parameters:
-        - name: lng
-          in: query
-          schema:
-            type: string
-          example: '-4.4203400'
-        - name: lat
-          in: query
-          schema:
-            type: string
-          example: '36.7201600'
-      responses:
-        '200':
-          description: Auto generated using Swagger Inspector
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  results:
-                    type: object
-                    properties:
-                      sunrise:
-                        type: string
-                      solar_noon:
-                        type: string
-                      day_length:
-                        type: string
-                      astronomical_twilight_end:
-                        type: string
-                      astronomical_twilight_begin:
-                        type: string
-                      sunset:
-                        type: string
-                      civil_twilight_end:
-                        type: string
-                      nautical_twilight_end:
-                        type: string
-                      civil_twilight_begin:
-                        type: string
-                      nautical_twilight_begin:
-                        type: string
-                  status:
+components:
+    schemas:
+        Specialty:
+            properties:
+                id:
+                    format: int32
+                    type: integer
+                name:
                     type: string
-              examples:
-                '0':
-                  value: >-
-                    {"results":{"sunrise":"7:02:05 AM","sunset":"6:01:12
-                    PM","solar_noon":"12:31:39
-                    PM","day_length":"10:59:07","civil_twilight_begin":"6:37:05
-                    AM","civil_twilight_end":"6:26:13
-                    PM","nautical_twilight_begin":"6:06:49
-                    AM","nautical_twilight_end":"6:56:28
-                    PM","astronomical_twilight_begin":"5:36:49
-                    AM","astronomical_twilight_end":"7:26:29 PM"},"status":"OK"}
-      servers:
-        - url: https://api.sunrise-sunset.org
-    servers:
-      - url: https://api.sunrise-sunset.org
+                new:
+                    type: boolean
+            type: object
+        Vet:
+            properties:
+                firstName:
+                    type: string
+                id:
+                    format: int32
+                    type: integer
+                lastName:
+                    type: string
+                new:
+                    type: boolean
+                nrOfSpecialties:
+                    format: int32
+                    type: integer
+                specialties:
+                    items:
+                        $ref: '#/components/schemas/Specialty'
+                    type: array
+                specialtiesInternal:
+                    items:
+                        $ref: '#/components/schemas/Specialty'
+                    type: array
+                    uniqueItems: true
+                    writeOnly: true
+            required:
+                - firstName
+                - lastName
+            type: object
+        Vets:
+            properties:
+                vetList:
+                    items:
+                        $ref: '#/components/schemas/Vet'
+                    type: array
+            type: object
+info:
+    title: OpenAPI definition
+    version: v0
+openapi: 3.0.1
+paths:
+    /vets:
+        get:
+            operationId: showResourcesVetList
+            responses:
+                "200":
+                    content:
+                        '*/*':
+                            schema:
+                                $ref: '#/components/schemas/Vets'
+                    description: OK
+            tags:
+                - vet-controller
+servers:
+    - url: http://petclinic-knative.my-apps.maz-tap-2610.tapdemo.vmware.com

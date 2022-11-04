@@ -47,7 +47,7 @@ components:
             type: object
 info:
     title: OpenAPI definition
-    version: v0
+    version: v0.1
 openapi: 3.0.1
 paths:
     /vets:

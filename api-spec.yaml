@@ -46,7 +46,7 @@ components:
                     type: array
             type: object
 info:
-    title: OpenAPI definition
+    title: dtpetstore
     version: v0.1
 openapi: 3.0.1
 paths:

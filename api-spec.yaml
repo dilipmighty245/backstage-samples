@@ -47,7 +47,7 @@ components:
             type: object
 info:
     title: dtpetstore
-    description: dt
+    description: dt owned api
     version: v0.1
 openapi: 3.0.1
 paths:

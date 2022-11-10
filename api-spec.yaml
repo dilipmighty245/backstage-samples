@@ -47,6 +47,7 @@ components:
             type: object
 info:
     title: dtpetstore
+    description: dt
     version: v0.1
 openapi: 3.0.1
 paths:
